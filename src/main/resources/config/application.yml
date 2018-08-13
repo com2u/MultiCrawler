@@ -1,0 +1,19 @@
+flyway:
+    enabled: true
+
+spring:
+    application:
+        name: MultiCrawler
+    datasource:
+        url: jdbc:postgresql://localhost:5432/multicrawler
+        name: org.postgresql.Driver
+        username: multicrawler
+        password: multicrawler
+
+logging:
+    config: classpath:config/logback-spring.xml
+    file: multicrawler.log
+
+multicrawler:
+    pollexecutor:
+        delay: 1000
